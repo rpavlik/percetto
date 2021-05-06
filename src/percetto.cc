@@ -153,10 +153,11 @@ static const char* TryGetProcessExeName(char* buffer, size_t buffer_size) {
 
 static const char* TryGetThreadName(char* buffer, size_t buffer_size) {
   pthread_t thread = pthread_self();
-  int result = pthread_getname_np(thread, buffer, buffer_size);
-  if (result != 0)
+//  int result = pthread_getname_np(thread, buffer, buffer_size);
+//  if (result != 0)
+//    return NULL;
+//  return buffer;
     return NULL;
-  return buffer;
 }
 
 static uint64_t GetTrackUuid(uint64_t trackid) {
